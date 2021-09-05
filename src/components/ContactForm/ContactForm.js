@@ -1,9 +1,16 @@
 import { useState } from 'react';
-import styles from './ContactForm.module.css';
+
 import { useSelector, useDispatch } from "react-redux";
 import { contactsSelectors, contactsOperations } from '../redux/contacts';
+// import { toast } from 'react-toastify';
+// import NumberFormat from 'react-number-format';
+ import Button from '@material-ui/core/Button';
 import LoaderComponent from '../../components/Loader/loader.js';
- function ContactForm({onSubmit}) {
+import styles from './ContactForm.module.css';
+
+
+function ContactForm() {
+//  function ContactForm({onSubmit}) {
     const contacts = useSelector(contactsSelectors.getContacts);
     const dispatch = useDispatch()
     const isLoading = useSelector(contactsSelectors.getLoading);
@@ -75,7 +82,8 @@ import LoaderComponent from '../../components/Loader/loader.js';
         />
         </label>
         {!isLoading && (
-        <button className={styles.buttonSubmit} type="submit">Add contact</button>
+        <Button className={styles.buttonSubmit} type="submit"  color="primary"
+        variant="contained" >Add contact</Button>
         )}
         {isLoading && <LoaderComponent />}
         </form>

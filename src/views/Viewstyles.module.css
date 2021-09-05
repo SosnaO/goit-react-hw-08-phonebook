@@ -1,0 +1,65 @@
+.wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 30px;
+      text-align: center;
+  }
+ 
+.title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, #833ab4, #f50057, #fcb045, #b345fc) 47%
+    0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info {
+  font-size: 20px;
+  color: var(--secondaryTextColor);
+}
+
+
+
+
+.contactListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+  
+.contact {
+  margin: 15px;
+}
+.buttonDelete {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 100px;
+  cursor: pointer;
+  background: cornflowerblue;
+}
+
+
+.form {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.textField {
+  margin-bottom: 20px !important;
+  width: 100%;
+  background-color: #fff !important;
+}

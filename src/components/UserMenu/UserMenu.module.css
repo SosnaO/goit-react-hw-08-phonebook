@@ -1,0 +1,13 @@
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.name {
+    
+    margin-right: 20px;
+   
+    font-size: 18px;
+  }
+  

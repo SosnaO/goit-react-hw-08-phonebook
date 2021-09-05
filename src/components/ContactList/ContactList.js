@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { contactsOperations, contactsSelectors} from '../redux/contacts'; 
 import ContactlistItem from './ContactListItem'
+import styles from './contactListItem.module.css'
 
 function  ContactList ()  { 
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ function  ContactList ()  {
   const onDelete = id => dispatch(contactsOperations.deleteContact(id))
   useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
    return (
-    <ul>
+    <ul className={styles.list}>
     {visibleContacts.map(({ name, number, id }) => ( 
      <ContactlistItem 
      key={id}
