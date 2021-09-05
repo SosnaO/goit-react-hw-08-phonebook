@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/NotFoundView.js"],"names":["NotFoundView","role"],"mappings":"0MAAe,SAASA,IACtB,OACE,sBAAMC,KAAK,QAAX,SACI","file":"static/js/not-found-view.f566de5f.chunk.js","sourcesContent":["export default function NotFoundView() {\r\n  return (\r\n    <main role=\"alert\">\r\n        <h1>Page not found</h1>\r\n    </main>\r\n  );\r\n}"],"sourceRoot":""}

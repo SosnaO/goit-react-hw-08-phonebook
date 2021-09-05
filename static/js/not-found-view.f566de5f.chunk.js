@@ -1,0 +1,2 @@
+(this["webpackJsonpgoit-react-hw-08-phonebook"]=this["webpackJsonpgoit-react-hw-08-phonebook"]||[]).push([[5],{174:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return r}));var o=n(3);function r(){return Object(o.jsx)("main",{role:"alert",children:Object(o.jsx)("h1",{children:"Page not found"})})}}}]);
+//# sourceMappingURL=not-found-view.f566de5f.chunk.js.map
