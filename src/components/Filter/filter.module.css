@@ -1,20 +1,17 @@
 .filterLabel {
   display: flex;
-    justify-content: space-between;
-  
-    margin-top: 0;
-    font-weight: 500;
+  justify-content: space-between;
+  margin-top: 0;
+  font-weight: 500;
 }
 .filterInput {
-    /* display: flex; */
-    /* margin-top: 10px; */
-    margin-bottom: 30px;
-    width: 250px;
-    border: 1px solid rgba(33,33,33,.2);
-    border-radius: 5px;
+  margin-bottom: 30px;
+  width: 250px;
+  border: 1px solid rgba(33,33,33,.2);
+  border-radius: 5px;
 }
 
 .filterInput:focus {
-    outline-color:blue;
+  outline-color:blue;
   }
   

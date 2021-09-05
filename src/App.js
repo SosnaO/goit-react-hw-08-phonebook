@@ -1,16 +1,11 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
-
-
 import AppBar from './components/AppBar/AppBar';
 import LoaderComponent from './components/Loader/loader';
-
 import { authOperations } from './components/redux/auth';
-
 
 const HomeView = lazy(() =>
   import('./views/HomeView' /* webpackChunkName: "home-view" */),
@@ -36,19 +31,15 @@ const NotFoundView = lazy(() =>
     dispatch(authOperations.getCurrentUser());
   }, [dispatch]);
 
-
-
    return (
      <>
-    
-    <AppBar />
-
-    <Suspense fallback={<LoaderComponent />}>
+     <AppBar />
+      <Suspense fallback={<LoaderComponent />}>
       <Switch>
         <PublicRoute path="/" exact>
           <HomeView />
         </PublicRoute>
-
+        
         <PublicRoute path="/register" restricted redirectTo="/contacts">
           <RegisterView />
         </PublicRoute>
@@ -64,6 +55,7 @@ const NotFoundView = lazy(() =>
         <Route>
           <NotFoundView />
         </Route>
+        
       </Switch>
     </Suspense>
   

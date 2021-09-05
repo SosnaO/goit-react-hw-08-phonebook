@@ -13,7 +13,7 @@ import {
   getCurrentUserSuccess,
   getCurrentUserError,
 } from './auth-actions';
-import { toast } from 'react-toastify';
+
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
@@ -36,14 +36,6 @@ export const register = credentials => async dispatch => {
     dispatch(registerSuccess(response.data));
   } catch (error) {
     dispatch(registerError(error));
-
-    if (error.response.status === 400) {
-      toast.error('User creation error! Please try again!');
-    } else if (error.response.status === 500) {
-      toast.error('Oops! Server error! Please try later!');
-    } else {
-      toast.error('Something went wrong!');
-    }
   }
 };
 
@@ -57,7 +49,6 @@ export const logIn = credentials => async dispatch => {
     dispatch(loginSuccess(response.data));
   } catch (error) {
     dispatch(loginError(error));
-    toast.error('Invalid email or password! Try again!');
   }
 };
 
@@ -71,12 +62,6 @@ export const logOut = () => async dispatch => {
     dispatch(logoutSuccess());
   } catch (error) {
     dispatch(logoutError(error));
-
-    if (error.response.status === 500) {
-      toast.error('Oops! Server error! Please try later!');
-    } else {
-      toast.error('Something went wrong! Please reload the page!');
-    }
   }
 };
 
@@ -99,6 +84,5 @@ export const getCurrentUser = () => async (dispatch, getState) => {
   } catch (error) {
     dispatch(getCurrentUserError(error));
     token.unset();
-    toast.warn('Authorization timed out! Please authenticate again!');
-  }
+    }
 };

@@ -1,36 +1,3 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import contactsReducer from './contacts/contacts-reducer';
-
-// export const store = configureStore({
-//   reducer: {
-//     contacts: contactsReducer,
-//   },
-// });
-
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import 'modern-normalize/modern-normalize.css';
-// import {Provider} from 'react-redux'
-// import { PersistGate } from 'redux-persist/integration/react'
-// import store from './components/redux/store'
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Provider store={store.store}>
-//     <PersistGate losding={null} persistor ={store.persistor}>
-//      <App />
-//      </PersistGate>
-//     </Provider>
-//    </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-
-
-
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,

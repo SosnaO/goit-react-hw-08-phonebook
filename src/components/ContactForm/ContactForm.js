@@ -1,20 +1,14 @@
 import { useState } from 'react';
-
 import { useSelector, useDispatch } from "react-redux";
 import { contactsSelectors, contactsOperations } from '../redux/contacts';
-// import { toast } from 'react-toastify';
-// import NumberFormat from 'react-number-format';
- import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import LoaderComponent from '../../components/Loader/loader.js';
 import styles from './ContactForm.module.css';
 
-
 function ContactForm() {
-//  function ContactForm({onSubmit}) {
     const contacts = useSelector(contactsSelectors.getContacts);
     const dispatch = useDispatch()
     const isLoading = useSelector(contactsSelectors.getLoading);
-
     const [name, setName]= useState('');
     const [number, setNumber]= useState('');
 

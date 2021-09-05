@@ -1,4 +1,4 @@
- import styles from './Viewstyles.module.css';
+import styles from './Viewstyles.module.css';
 const HomeView = () => {
    
   return (

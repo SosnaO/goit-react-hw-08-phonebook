@@ -2,11 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
-  
-/* .contact {
-  margin: 15px;
-} */
+}
 .buttonDelete {
   width: 100px;
   height: 30px;
@@ -14,7 +10,6 @@
   cursor: pointer;
   background: cornflowerblue;
 }
-
 .list{
   padding:0px;
 }

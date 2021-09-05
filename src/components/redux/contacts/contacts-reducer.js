@@ -23,7 +23,6 @@ const filter = createReducer('', {
   [changeFilter]: (_, { payload }) => payload,
 });
 
-
 const isLoading = createReducer(false, {
   [fetchContactsRequest]: () => true,
   [fetchContactsSuccess]: () => false,
@@ -35,7 +34,6 @@ const isLoading = createReducer(false, {
   [deleteContactSuccess]: () => false,
   [deleteContactError]: () => false,
 });
-
 
 const error = createReducer(null, {
   [fetchContactsError]: (_, { payload }) => payload,

@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from '../redux/auth';
- import Button from '@material-ui/core/Button';
-// import defaultAvatar from '../../img/avatar.png';
- import styles from './UserMenu.module.css';
+import Button from '@material-ui/core/Button';
+import styles from './UserMenu.module.css';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -10,12 +9,6 @@ export default function UserMenu() {
 
   return (
     <div className={styles.user}>
-      {/* <img
-        src={defaultAvatar}
-        alt="Default Avatar"
-        width="32"
-        className={s.avatar}
-      /> */}
       <span className={styles.name}>Welcome, {name}</span>
       <Button
         color="primary"
